@@ -1,4 +1,9 @@
-import '@/app/ui/global.css';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Unified Portal',
+  description: 'The tryout for the Unified Portal.',
+};
 
 export default function Layout ({ children }: { children: React.ReactNode }){
     return(
