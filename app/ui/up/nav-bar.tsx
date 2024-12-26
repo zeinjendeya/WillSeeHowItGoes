@@ -8,7 +8,6 @@ import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
 import {
-  ChevronDownIcon,
   Cog6ToothIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
