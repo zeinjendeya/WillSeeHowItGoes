@@ -7,7 +7,11 @@
 import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
-import { ChevronDownIcon, Cog6ToothIcon } from "@heroicons/react/20/solid";
+import {
+  ChevronDownIcon,
+  Cog6ToothIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/20/solid";
 // import Dropdown from "@/app/ui/up/dropdown";
 
 // text area to be toggled appear or not in certain pages
@@ -17,9 +21,23 @@ export default function NavBar() {
       className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 hidden md:block text-white px-8 py-4"
       style={{ backgroundImage: `url(${NavBG.src})` }}
     >
-      <div className="w-full flex justify-start">
-      <Cog6ToothIcon stroke="currentColor" fill="none" strokeWidth={1.5} className="flex justify-center w-5 h-5 text-text-white" width={1} height={1} />
+      <div className="items-center justify-start hidden w-full gap-4 px-4 pt-2 pb-2 md:flex">
+        <a
+          className="inline-flex items-center transition-colors text-base cursor-pointer bg-transparent p1 text-rm-white hover:bg-transparent hover:no-underline undefined"
+          href="#"
+          style={{ fontSize: 14 }}
+        >
+          EN
+        </a>
+        <Cog6ToothIcon
+          stroke="currentColor"
+          fill="none"
+          strokeWidth={1.5}
+          className="flex justify-center w-5 h-5 text-text-white"
+        />
+        <MagnifyingGlassIcon className="flex justify-center w-6 h-6 text-text-white" />
       </div>
+
       <div className="flex items-center justify-between w-full">
         <div className="hidden md:block">
           <a
@@ -39,7 +57,7 @@ export default function NavBar() {
               عن الأمانة
             </a>
             <span className="ms-1 me-0">
-              <ChevronDownIcon  className="flex justify-center w-5 h-5 text-text-white" />
+              <ChevronDownIcon className="flex justify-center w-5 h-5 text-text-white" />
             </span>
           </li>
 
