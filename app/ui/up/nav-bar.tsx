@@ -12,84 +12,92 @@ import {
   Cog6ToothIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
+import HeaderTag from "./header-tag";
 // import Dropdown from "@/app/ui/up/dropdown";
 
 // text area to be toggled appear or not in certain pages
 export default function NavBar() {
   return (
     <div
-      className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 hidden md:block text-white px-8 py-4"
+      className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 hidden md:block text-white"
       style={{ backgroundImage: `url(${NavBG.src})` }}
     >
-      <div className="items-center justify-start hidden w-full gap-4 px-4 pt-2 pb-2 md:flex">
-        <a
-          className="inline-flex items-center transition-colors text-base cursor-pointer bg-transparent p1 text-rm-white hover:bg-transparent hover:no-underline undefined"
-          href="#"
-          style={{ fontSize: 14 }}
-        >
-          EN
-        </a>
-        <Cog6ToothIcon
-          stroke="currentColor"
-          fill="none"
-          strokeWidth={1.5}
-          className="flex justify-center w-5 h-5 text-text-white"
-        />
-        <MagnifyingGlassIcon className="flex justify-center w-6 h-6 text-text-white" />
-      </div>
-
-      <div className="flex items-center justify-between w-full">
-        <div className="hidden md:block">
+      <nav className="px-8 py-4">
+        <div className="items-center justify-start hidden w-full gap-4 px-4 pt-2 pb-2 md:flex">
           <a
-            style={{ fontSize: 18 }}
-            className="bg-white text-green-800 px-8 py-4 rounded-full hover:bg-green-600 hover:text-white"
+            className="inline-flex items-center transition-colors text-base cursor-pointer bg-transparent p1 text-rm-white hover:bg-transparent hover:no-underline undefined"
+            href="#"
+            style={{ fontSize: 14 }}
           >
-            تسجيل دخول
+            EN
           </a>
+          <Cog6ToothIcon
+            stroke="currentColor"
+            fill="none"
+            strokeWidth={1.5}
+            className="flex justify-center w-5 h-5 text-text-white"
+          />
+          <MagnifyingGlassIcon className="flex justify-center w-6 h-6 text-text-white" />
         </div>
 
-        <ul
-          style={{ fontSize: 14 }}
-          className=" space-x-2 hidden md:flex gap-5 flex-row-reverse"
-        >
-          <li className="flex items-start gap-0.5 flex-row-reverse">
-            <a href="#" className="flex items-center gap-0.5">
-              عن الأمانة
+        <div className="flex items-center justify-between w-full">
+          <div className="hidden md:block">
+            <a
+              style={{ fontSize: 18 }}
+              className="bg-white text-green-800 px-8 py-4 rounded-full hover:bg-green-600 hover:text-white"
+            >
+              تسجيل الدخول
             </a>
-            <span className="ms-1 me-0">
-              <ChevronDownIcon className="flex justify-center w-5 h-5 text-text-white" />
-            </span>
-          </li>
+          </div>
 
-          <li className="flex items-start gap-0.5 flex-row-reverse">
-            <a href="#" className="flex items-center gap-0.5">
-              الإعلام و الاتصال
-            </a>
-          </li>
+          <ul
+            style={{ fontSize: 14 }}
+            className=" space-x-2 hidden md:flex gap-5 flex-row-reverse"
+          >
+            <li className="flex items-start gap-0.5 flex-row-reverse">
+              <a href="#" className="flex items-center gap-0.5">
+                عن الأمانة
+              </a>
+              <span className="ms-1 me-0">
+                <ChevronDownIcon className="flex justify-center w-5 h-5 text-text-white" />
+              </span>
+            </li>
 
-          <li className="flex items-start gap-0.5 flex-row-reverse">
-            <a href="#" className="flex items-center gap-0.5">
-              المشاركة الالكترونية
-            </a>
-          </li>
+            <li className="flex items-start gap-0.5 flex-row-reverse">
+              <a href="#" className="flex items-center gap-0.5">
+                الخدمات الالكترونية
+              </a>
+            </li>
 
-          <li className="flex items-start gap-0.5 flex-row-reverse">
-            <a href="#" className="flex items-center gap-0.5">
-              البيانات المفتوحة
-            </a>
-          </li>
+            <li className="flex items-start gap-0.5 flex-row-reverse">
+              <a href="#" className="flex items-center gap-0.5">
+                الإعلام و الاتصال
+              </a>
+            </li>
 
-          <li className="flex items-start gap-0.5 flex-row-reverse">
-            <a href="#" className="flex items-center gap-0.5">
-              الخدمات الالكترونية
-            </a>
-          </li>
-        </ul>
+            <li className="flex items-start gap-0.5 flex-row-reverse">
+              <a href="#" className="flex items-center gap-0.5">
+                البيانات المفتوحة
+              </a>
+              <span className="ms-1 me-0">
+                <ChevronDownIcon className="flex justify-center w-5 h-5 text-text-white" />
+              </span>
+            </li>
 
-        <div className="flex items-center justify-between md:w-fit gap-4">
-          <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
+            <li className="flex items-start gap-0.5 flex-row-reverse">
+              <a href="#" className="flex items-center gap-0.5">
+                المشاركة الالكترونية
+              </a>
+            </li>
+          </ul>
+
+          <div className="flex items-center justify-between md:w-fit gap-4">
+            <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
+          </div>
         </div>
-      </div>
+      </nav>
+
+      <HeaderTag show={true} />
     </div>
   );
 }
