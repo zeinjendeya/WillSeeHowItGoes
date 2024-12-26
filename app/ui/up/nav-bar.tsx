@@ -13,10 +13,14 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
-// import Dropdown from "@/app/ui/up/dropdown";
+import Dropdown from "@/app/ui/up/dropdown";
 
 // text area to be toggled appear or not in certain pages
 export default function NavBar() {
+  const dropLink1 = {
+    'name' : 'عن الأمانة',
+    'links' : [{href:'#',label:'شركاؤنا'},{href:'##',label:'المجلس البلدي'},{href:'###',label:'الإدارة التنفيذية'}, {href:'####',label:'شركاؤنا'},{href:'#####',label:'المجلس البلدي'},{href:'######',label:'الإدارة التنفيذية'}, {href:'#######',label:'شركاؤنا'},{href:'########',label:'المجلس البلدي'},{href:'#########',label:'الإدارة التنفيذية'}, {href:'##########',label:'شركاؤنا'}]
+  };
   return (
     <div
       className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 hidden md:block text-white"
@@ -54,14 +58,15 @@ export default function NavBar() {
             style={{ fontSize: 14 }}
             className=" space-x-2 hidden md:flex gap-5 flex-row-reverse"
           >
-            <li className="flex items-start gap-0.5 flex-row-reverse">
+            <Dropdown {...dropLink1} />
+            {/* <li className="flex items-start gap-0.5 flex-row-reverse">
               <a href="#" className="flex items-center gap-0.5">
                 عن الأمانة
               </a>
               <span className="ms-1 me-0">
                 <ChevronDownIcon className="flex justify-center w-5 h-5 text-text-white" />
               </span>
-            </li>
+            </li> */}
 
             <li className="flex items-start gap-0.5 flex-row-reverse">
               <a href="#" className="flex items-center gap-0.5">
