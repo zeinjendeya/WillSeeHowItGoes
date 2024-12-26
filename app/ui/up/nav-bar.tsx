@@ -17,10 +17,15 @@ import Dropdown from "@/app/ui/up/dropdown";
 
 // text area to be toggled appear or not in certain pages
 export default function NavBar() {
-  const dropLink1 = {
+  const aboutAmana = {
     'name' : 'عن الأمانة',
-    'links' : [{href:'#',label:'شركاؤنا'},{href:'##',label:'المجلس البلدي'},{href:'###',label:'الإدارة التنفيذية'}, {href:'####',label:'شركاؤنا'},{href:'#####',label:'المجلس البلدي'},{href:'######',label:'الإدارة التنفيذية'}, {href:'#######',label:'شركاؤنا'},{href:'########',label:'المجلس البلدي'},{href:'#########',label:'الإدارة التنفيذية'}, {href:'##########',label:'شركاؤنا'}]
+    'links' : [{href:'#',label:'عن مدينة الرياض'},{href:'##',label:'عن الأمانة'},{href:'###',label:'البلديات'}, {href:'####',label:'أمناء الرياض'},{href:'#####',label:'المبادرات و المشاريع'},{href:'######',label:'شركاء الأمانة المحليين'}, {href:'#######',label:'إحصائيات البوابة'},{href:'########',label:'التنمية المستدامة'},{href:'#########',label:'الجوائز'}, {href:'##########',label:'الأمانة في أرقام'}]
   };
+
+  const openDataSet = {
+    'name': 'البيانات المفتوحة',
+    'links' : [{href: '#', label: 'البيانات المفتوحة'}, {href: '##', label: 'البيانات الحكومية المفتوحة'}, {href: '###', label: 'مجموعات  البيانات'}, {href: '####', label: 'البوابة الجيومكانية'}, {href: '#####', label: 'طلب اضافة مفوض'}, {href: '######', label: 'قصص نجاح البيانات المفتوحة'}]
+  }
   return (
     <div
       className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 hidden md:block text-white"
@@ -58,7 +63,7 @@ export default function NavBar() {
             style={{ fontSize: 14 }}
             className=" space-x-2 hidden md:flex gap-5 flex-row-reverse"
           >
-            <Dropdown {...dropLink1} />
+            <Dropdown gridCols="2" className="flex items-start gap-0.5" {...aboutAmana} />
             {/* <li className="flex items-start gap-0.5 flex-row-reverse">
               <a href="#" className="flex items-center gap-0.5">
                 عن الأمانة
@@ -80,14 +85,7 @@ export default function NavBar() {
               </a>
             </li>
 
-            <li className="flex items-start gap-0.5 flex-row-reverse">
-              <a href="#" className="flex items-center gap-0.5">
-                البيانات المفتوحة
-              </a>
-              <span className="ms-1 me-0">
-                <ChevronDownIcon className="flex justify-center w-5 h-5 text-text-white" />
-              </span>
-            </li>
+              <Dropdown gridCols="1" {...openDataSet} className="flex items-start gap-0.5 flex-row-reverse"/>
 
             <li className="flex items-start gap-0.5 flex-row-reverse">
               <a href="#" className="flex items-center gap-0.5">
