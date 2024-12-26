@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import subNav from "@/public/subNavigationCard.svg"
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
