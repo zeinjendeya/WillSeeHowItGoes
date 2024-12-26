@@ -3,7 +3,7 @@
 // buttons
 // logo
 
-import Link from "next/link";
+// import Link from "next/link";
 import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
