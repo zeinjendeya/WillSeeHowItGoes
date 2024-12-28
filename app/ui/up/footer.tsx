@@ -188,7 +188,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex text-white flex-row-reverse justify-between bg-[#01543A] px-8 py-7">
+      <div className="flex text-white flex-row-reverse justify-between bg-[#01543A] px-8 py-7" style={{ fontSize: 14 }}>
         <p>جميع حقوق الطبع محفوظةلأمانة منطقة الرياض © 2024</p>
         <a href="">خريطة الموقع</a>
         <div className="flex justify-around flex-row-reverse items-center">
