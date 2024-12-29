@@ -15,12 +15,12 @@ interface DropdownProps {
   links: LinkItem[];
 }
 
-export default function Dropdown({ name, links, className, gridCols }: DropdownProps & { className?: string } & { gridCols?: string }) {
+export default function DropdownLg({ name, links, className, gridCols }: DropdownProps & { className?: string } & { gridCols?: string }) {
     return (
-        <li className={`relative group/main inline-block text-left ${className}`}>
+        <li className={`relative group/main block text-left ${className}`}>
             <a
                 href="#"
-                className="relative group inline-flex items-center justify-between w-full text-sm font-medium focus:outline-none"
+                className="relative group flex items-center justify-between w-full text-sm font-medium focus:outline-none"
             >
                 <span className="ms-0 me-0">
                     <ChevronDownIcon

@@ -1,9 +1,3 @@
-// this will have:
-// links in our website navbar
-// buttons
-// logo
-
-// import Link from "next/link";
 import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
@@ -12,7 +6,8 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
-import Dropdown from "@/app/ui/up/header/dropdown-header";
+import DropdownLg from "@/app/ui/up/header/dropdown-header";
+import { BsList } from "react-icons/bs";
 
 // text area to be toggled appear or not in certain pages
 export default function NavBar() {
@@ -27,11 +22,11 @@ export default function NavBar() {
   }
   return (
     <div
-      className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 hidden md:block text-white"
+      className="bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 sm:hidden md:block text-white"
       style={{ backgroundImage: `url(${NavBG.src})` }}
     >
       <nav className="px-8 py-4">
-        <div className="items-center justify-start hidden w-full gap-4 px-4 pt-2 pb-2 md:flex">
+        <div className="items-center justify-start hidden w-full gap-4 px-4 pt-2 pb-2 lg:flex">
           <a
             className="inline-flex items-center transition-colors text-base cursor-pointer bg-transparent p1 text-rm-white hover:bg-transparent hover:no-underline undefined"
             href="#"
@@ -49,10 +44,12 @@ export default function NavBar() {
         </div>
 
         <div className="flex items-center justify-between w-full">
-          <div className="hidden md:block">
+          <BsList className="lg:hidden block w-6 h-6" strokeWidth={0.8}/>
+
+          <div className="hidden lg:flex justify-center">
             <a
               style={{ fontSize: 18 }}
-              className="bg-white text-green-800 px-8 py-4 rounded-full hover:bg-green-600 hover:text-white"
+              className="bg-white text-green-800 w-fit lg:px-8 lg:py-4  rounded-full hover:bg-green-600 hover:text-white"
             >
               تسجيل الدخول
             </a>
@@ -60,9 +57,9 @@ export default function NavBar() {
 
           <ul
             style={{ fontSize: 14 }}
-            className=" space-x-2 hidden md:flex gap-5 flex-row-reverse"
+            className="hidden lg:flex gap-5 justify-center flex-row-reverse w-full"
           >
-            <Dropdown gridCols="2" className="flex items-start gap-0.5" {...aboutAmana} />
+            <DropdownLg gridCols="2" className="flex items-start justify-end gap-0.5" {...aboutAmana} />
             {/* <li className="flex items-start gap-0.5 flex-row-reverse">
               <a href="#" className="flex items-center gap-0.5">
                 عن الأمانة
@@ -72,21 +69,21 @@ export default function NavBar() {
               </span>
             </li> */}
 
-            <li className="flex items-start gap-0.5 flex-row-reverse">
+            <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
               <a href="#" className="flex items-center gap-0.5">
                 الخدمات الالكترونية
               </a>
             </li>
 
-            <li className="flex items-start gap-0.5 flex-row-reverse">
+            <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
               <a href="#" className="flex items-center gap-0.5">
                 الإعلام و الاتصال
               </a>
             </li>
 
-              <Dropdown gridCols="1" {...openDataSet} className="flex items-start gap-0.5 flex-row-reverse"/>
+              <DropdownLg gridCols="1" {...openDataSet} className="flex items-start justify-end w-fit gap-0.5 flex-row-reverse"/>
 
-            <li className="flex items-start gap-0.5 flex-row-reverse">
+            <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
               <a href="#" className="flex items-center gap-0.5">
                 المشاركة الالكترونية
               </a>
