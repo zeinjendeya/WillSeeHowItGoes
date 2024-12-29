@@ -12,7 +12,7 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
-import Dropdown from "@/app/ui/up/dropdown";
+import Dropdown from "@/app/ui/up/dropdown-header";
 
 // text area to be toggled appear or not in certain pages
 export default function NavBar() {
