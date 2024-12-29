@@ -1,7 +1,7 @@
 import "tailwind.config";
 import { Metadata } from "next";
-import NavBar from "../ui/up/nav-bar";
-import Footer from "../ui/up/footer";
+import NavBar from "../ui/up/header/nav-bar";
+import Footer from "../ui/up/footer/footer";
 
 export const metadata: Metadata = {
   title: "Unified Portal",
