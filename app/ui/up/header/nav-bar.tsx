@@ -46,10 +46,10 @@ export default function NavBar() {
         <div className="flex items-center justify-between w-full">
           <BsList className="lg:hidden block w-6 h-6" strokeWidth={0.8}/>
 
-          <div className="hidden lg:flex justify-center">
+          <div className=" w-[12em] hidden lg:flex justify-center">
             <a
               style={{ fontSize: 18 }}
-              className="bg-white text-green-800 w-fit lg:px-8 lg:py-4  rounded-full hover:bg-green-600 hover:text-white"
+              className="bg-white text-green-800 w-56 flex justify-center lg:px-8 lg:py-4  rounded-full hover:bg-green-600 hover:text-white"
             >
               تسجيل الدخول
             </a>
