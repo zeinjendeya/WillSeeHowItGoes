@@ -1,7 +1,8 @@
 import "tailwind.config";
 import { Metadata } from "next";
-import NavBar from "../ui/up/header/nav-bar";
 import Footer from "../ui/up/footer/footer";
+import NavBarLG from "../ui/up/header/nav-bar-lg";
+import NavBarMS from "../ui/up/header/nav-bar-ms";
 
 export const metadata: Metadata = {
   title: "Unified Portal",
@@ -10,8 +11,9 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col h-screen">
-      <NavBar />
+    <div className="flex flex-col">
+      <NavBarLG />
+      <NavBarMS />
       <div>{children}</div>
       <div>{/* comment section - section will be divided up later */}</div>
       <Footer />

@@ -51,15 +51,15 @@ export default function BurgerMenu({ name, links }: DropdownProps) {
       </div>
 
       <ul
-        className={`transition-max-height overflow-hidden px-5 py-3 duration-300 ease-in-out overflow-hidden bg-[#F3F7F5] w-full flex-col items-end gap-2 ${
-          isOpen ? "flex opacity-1" : "opacity-0 hidden"
+        className={`transition-all duration-600 ease-in-out flex px-5 py-2 overflow-hidden bg-[#F3F7F5] w-full flex-col items-end gap-2 ${
+          isOpen ? "max-h-auto opacity-1" : " hidden max-h-0 opacity-0"
         }`}
-        style={{ fontSize: 14 }}
+        style={{ fontSize: 14, transitionProperty: "max-height, opacity" }}
       >
         {links.map((link) => {
           return (
             <li className="flex items-center" key={link.href}>
-              <a className="py-1.5" href={link.href}>
+              <a className="py-2" href={link.href}>
                 {link.label}
               </a>
             </li>
