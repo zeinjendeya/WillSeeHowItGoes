@@ -1,20 +1,22 @@
-import '@/app/ui/global.css';
-import { Metadata } from 'next';
+import "tailwind.config";
+import { Metadata } from "next";
+import Footer from "./ui/up/footer/footer";
+import NavBarLG from "./ui/up/header/nav-bar-lg";
+import NavBarMS from "./ui/up/header/nav-bar-ms";
 
 export const metadata: Metadata = {
-  title: 'Acme',
-  description: 'The official Next.js Course Dashboard, built with App Router.',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  title: "Unified Portal",
+  description: "The tryout for the Unified Portal.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className='max-w-screen-3xl mx-auto'>{children}</body>
-    </html>
+    <div className="flex flex-col">
+      <NavBarLG />
+      <NavBarMS />
+      <div>{children}</div>
+      <div>{/* comment section - section will be divided up later */}</div>
+      <Footer />
+    </div>
   );
 }
