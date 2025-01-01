@@ -16,3 +16,28 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+@font-face {
+  font-family: 'BahijTheSansArabic';
+  src: url('../../public/fonts/Bahij_TheSansArabic-Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BahijTheSansArabic';
+  src: url('../../public/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BahijTheSansArabic';
+  src: url('../../public/fonts/Bahij_TheSansArabic-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  font-family: 'BahijTheSansArabic';
+}

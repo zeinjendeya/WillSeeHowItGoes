@@ -1,12 +1,15 @@
-import '@/app/ui/global.css';
-import { inter } from './ui/fonts';
-import { Metadata } from 'next';
+import "tailwind.config";
+import { Metadata } from "next";
+import Footer from "./ui/up/footer/footer";
+import NavBarLG from "./ui/up/header/nav-bar-lg";
+import NavBarMS from "./ui/up/header/nav-bar-ms";
+import './ui/global.css'
 
 export const metadata: Metadata = {
-  title: 'Acme',
-  description: 'The official Next.js Course Dashboard, built with App Router.',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  title: "Unified Portal",
+  description: "The tryout for the Unified Portal.",
 };
+
 
 export default function RootLayout({
   children,
@@ -15,7 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body>
+        <NavBarLG />
+        <NavBarMS />
+        <div>{children}</div>
+        <div>{/* comment section - section will be divided up later */}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
