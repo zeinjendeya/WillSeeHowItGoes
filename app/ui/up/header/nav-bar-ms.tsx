@@ -1,25 +1,46 @@
+"use client";
+
 import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
 import HeaderTag from "./header-tag";
 import { BsList } from "react-icons/bs";
+import { BiX } from "react-icons/bi";
 import { Cog6ToothIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import BurgerMenu from "./burger-menu";
+import { useState, useEffect } from "react";
 
 export default function NavBarMS() {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+
+  useEffect(() => {
+    if (isDropdownVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isDropdownVisible]);
+
   const aboutAmana = {
     name: "عن الأمانة",
     links: [
-      { href: "#", label: "عن مدينة الرياض" },
       { href: "##", label: "عن الأمانة" },
-      { href: "###", label: "البلديات" },
+      { href: "#", label: "عن مدينة الرياض" },
       { href: "####", label: "أمناء الرياض" },
-      { href: "#####", label: "المبادرات و المشاريع" },
+      { href: "###", label: "البلديات" },
       { href: "######", label: "شركاء الأمانة المحليين" },
-      { href: "#######", label: "إحصائيات البوابة" },
+      { href: "#####", label: "المبادرات و المشاريع" },
       { href: "########", label: "التنمية المستدامة" },
-      { href: "#########", label: "الجوائز" },
+      { href: "#######", label: "إحصائيات البوابة" },
       { href: "##########", label: "الأمانة في أرقام" },
+      { href: "#########", label: "الجوائز" },
     ],
   };
 
@@ -36,14 +57,29 @@ export default function NavBarMS() {
   };
 
   return (
-    <header className="w-full h-full lg:hidden relative inset-0 z-50">
+    <header
+      className={`w-full flex flex-col justify-between lg:hidden ${
+        isDropdownVisible
+          ? "fixed inset-0 z-40 h-screen overflow-y-auto"
+          : "relative h-full"
+      }`}
+    >
       <nav
         style={{ backgroundImage: `url(${NavBG.src})` }}
         className="px-4 bg-center bg-no-repeat bg-cover rounded-b-2xl relative z-50 block text-white"
       >
-
         <div className="flex items-center justify-between w-full">
-          <BsList className="block w-6 h-6" strokeWidth={0.8} />
+          {/* <BsList className="block w-6 h-6" strokeWidth={0.8} /> */}
+
+          {isDropdownVisible ? (
+            <BiX className="block w-8 h-8" onClick={toggleDropdown} />
+          ) : (
+            <BsList
+              className="block w-6 h-6"
+              strokeWidth={0.8}
+              onClick={toggleDropdown}
+            />
+          )}
 
           <div className="flex items-center justify-between w-fit gap-4">
             <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
@@ -52,20 +88,25 @@ export default function NavBarMS() {
 
         <HeaderTag px="px-4" show={true} h1_size={24} h6_size={12} />
       </nav>
-
-      <div className="flex justify-center">
+      <div
+        className={`bg-white transition-all w-full duration-300 dynamic-top ease-in-out ${
+          isDropdownVisible ? "opacity-1 h-full" : "opacity-0 h-0"
+        } overflow-y-auto`}
+        style={{ transitionProperty: "opacity, height" }}
+      >
+        {/* isDropdownVisible */}
         <div className="pt-6 w-full h-full flex flex-col justify-between">
           <div className="flex justify-center w-full">
             <ul className="flex flex-col w-full text-[#2C302F]">
               <BurgerMenu {...aboutAmana} />
-              <li className="w-full flex justify-end px-5 py-2">
+              <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <a href="#">الخدمات الالكترونية</a>
               </li>
-              <li className="w-full flex justify-end px-5 py-2">
+              <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <a href="#">الإعلام و الاتصال</a>
               </li>
               <BurgerMenu {...openDataSet} />
-              <li className="w-full flex justify-end px-5 py-2">
+              <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <a href="#">المشاركة الالكترونية</a>
               </li>
             </ul>
