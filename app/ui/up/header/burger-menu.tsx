@@ -13,41 +13,18 @@ interface DropdownProps {
   links: LinkItem[];
 }
 
-export default function BurgerMenu({ name, links }: DropdownProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function openMenu() {
-    setIsOpen(!isOpen);
-    console.log("isOpen", isOpen);
-  }
+export default function BurgerMenu({ name, links, isOpen, onToggle }: DropdownProps & { isOpen: boolean; onToggle: () => void }) {
 
   return (
     <li className="flex justify-end w-full flex-col mt-2 py-2">
-      <div className="w-full flex flex-row-reverse justify-between px-5">
-        <a
-          href="#"
-          className={`w-fit ${isOpen ? "text-green-700" : "text-[#2C302F]"}`}
-          onClick={(e) => {
-            e.preventDefault();
-            openMenu();
-          }}
-        >
-          {name}
-        </a>
-        <span
-          className="ms-1 me-0 cursor-pointer"
-          onClick={(e) => {
-            e.preventDefault();
-            openMenu();
-          }}
-        >
-          <ChevronDownIcon
-            strokeWidth={2}
-            className={`flex items-center w-5 h-5 transition-transform duration-300 ${
-              isOpen ? "transform rotate-180 text-green-700" : "text-[#2C302F]"
-            }`}
-          />
-        </span>
+      <div className="flex justify-between flex-row-reverse items-center cursor-pointer" onClick={onToggle}>
+        <span className="px-5">{name}</span>
+        <ChevronDownIcon
+          strokeWidth={2}
+          className={`flex items-center w-5 h-5 transition-transform duration-300 ${
+            isOpen ? "transform rotate-180 text-green-700" : "text-[#2C302F]"
+          }`}
+        />
       </div>
 
       <ul
@@ -56,15 +33,13 @@ export default function BurgerMenu({ name, links }: DropdownProps) {
         }`}
         style={{ fontSize: 14, transitionProperty: "max-height, opacity, padding" }}
       >
-        {links.map((link) => {
-          return (
-            <li className="flex items-center" key={link.href}>
-              <a className="py-2 hover:underline" href={link.href}>
-                {link.label}
-              </a>
-            </li>
-          );
-        })}
+        {links.map((link) => (
+          <li className="flex items-center" key={link.href}>
+            <a className="py-2 hover:underline" href={link.href}>
+              {link.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </li>
   );

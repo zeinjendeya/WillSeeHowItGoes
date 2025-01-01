@@ -12,9 +12,14 @@ import { useState, useEffect } from "react";
 
 export default function NavBarMS() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [openMenu, setOpenMenu] = useState('');
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
+  };
+
+  const handleToggleMenu = (menuName : string) => {
+    setOpenMenu(openMenu === menuName ? '' : menuName);
   };
 
   useEffect(() => {
@@ -98,14 +103,24 @@ export default function NavBarMS() {
         <div className="pt-6 w-full h-full flex flex-col justify-between">
           <div className="flex justify-center w-full">
             <ul className="flex flex-col w-full text-[#2C302F]">
-              <BurgerMenu {...aboutAmana} />
+            <BurgerMenu
+                name={aboutAmana.name}
+                links={aboutAmana.links}
+                isOpen={openMenu === aboutAmana.name}
+                onToggle={() => handleToggleMenu(aboutAmana.name)}
+              />
               <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <a href="#">الخدمات الالكترونية</a>
               </li>
               <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <a href="#">الإعلام و الاتصال</a>
               </li>
-              <BurgerMenu {...openDataSet} />
+              <BurgerMenu
+                name={openDataSet.name}
+                links={openDataSet.links}
+                isOpen={openMenu === openDataSet.name}
+                onToggle={() => handleToggleMenu(openDataSet.name)}
+              />
               <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <a href="#">المشاركة الالكترونية</a>
               </li>
