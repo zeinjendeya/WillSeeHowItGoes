@@ -20,7 +20,7 @@ export default function BurgerMenu({ name, links, isOpen, onToggle }: DropdownPr
         <span className="px-5">{name}</span>
         <ChevronDownIcon
           strokeWidth={2}
-          className={`flex items-center w-5 h-5 transition-transform duration-300 ${
+          className={`flex items-center w-5 h-5 ms-4 transition-transform duration-300 ${
             isOpen ? "transform rotate-180 text-green-700" : "text-[#2C302F]"
           }`}
         />
