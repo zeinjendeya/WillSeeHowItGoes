@@ -1,3 +1,4 @@
+import CommentLG from "./ui/up/comment/commentLG";
 import Breadcrumb from "./ui/up/elements/breadcrumb";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 
@@ -12,6 +13,7 @@ export default function Page(){
         <div className="section-container flex flex-col relative">
           <Breadcrumb {...breadcrumbs} />
         </div>
+        <CommentLG />
       </main>
   );
 }

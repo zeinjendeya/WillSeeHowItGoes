@@ -26,7 +26,6 @@ export default function RootLayout({
         <NavBarLG />
         <NavBarMS />
         {children}
-        <div>{/* comment section - section will be divided up later */}</div>
         <Footer />
       </body>
     </html>
