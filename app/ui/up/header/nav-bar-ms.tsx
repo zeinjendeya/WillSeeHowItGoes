@@ -77,18 +77,18 @@ export default function NavBarMS() {
           {/* <BsList className="block w-6 h-6" strokeWidth={0.8} /> */}
 
           {isDropdownVisible ? (
-            <BiX className="block w-8 h-8" onClick={toggleDropdown} />
+            <BiX className="block w-8 h-8 cursor-pointer" onClick={toggleDropdown} />
           ) : (
             <BsList
-              className="block w-6 h-6"
+              className="block w-6 h-6 cursor-pointer"
               strokeWidth={0.8}
               onClick={toggleDropdown}
             />
           )}
 
-          <div className="flex items-center justify-between w-fit gap-4">
+          <a href="/" className="flex items-center justify-between w-fit gap-4">
             <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
-          </div>
+          </a>
         </div>
 
         <HeaderTag px="px-4" show={true} h1_size={24} h6_size={12} />

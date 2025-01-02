@@ -102,9 +102,9 @@ export default function NavBarLG() {
             </li>
           </ul>
 
-          <div className="flex items-center justify-between md:w-fit gap-4">
-            <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
-          </div>
+          <a href="/" className="flex items-center justify-between md:w-fit gap-4">
+            <Image src={SvgSrc} alt="Amana Logo" width={300} height={93} />
+          </a>
         </div>
         <HeaderTag px="px-8" show={true} h1_size={32} h6_size={18} />
       </nav>
