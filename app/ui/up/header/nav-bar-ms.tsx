@@ -63,7 +63,7 @@ export default function NavBarMS() {
 
   return (
     <header
-      className={`w-full flex flex-col justify-between lg:hidden ${
+      className={`w-full flex flex-col lg:hidden ${
         isDropdownVisible
           ? "fixed inset-0 z-40 h-screen overflow-y-auto"
           : "relative h-full"

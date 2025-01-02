@@ -12,11 +12,18 @@ interface DropdownProps {
   links: LinkItem[];
 }
 
-export default function BurgerMenu({ name, links, isOpen, onToggle }: DropdownProps & { isOpen: boolean; onToggle: () => void }) {
-
+export default function BurgerMenu({
+  name,
+  links,
+  isOpen,
+  onToggle,
+}: DropdownProps & { isOpen: boolean; onToggle: () => void }) {
   return (
     <li className="flex justify-end w-full flex-col mt-2 py-2">
-      <div className="flex justify-between flex-row-reverse items-center cursor-pointer" onClick={onToggle}>
+      <div
+        className="flex justify-between flex-row-reverse items-center cursor-pointer"
+        onClick={onToggle}
+      >
         <span className="px-5">{name}</span>
         <ChevronDownIcon
           strokeWidth={2}
@@ -27,13 +34,15 @@ export default function BurgerMenu({ name, links, isOpen, onToggle }: DropdownPr
       </div>
 
       <ul
-        className={`transition-all duration-600 ease-in-out overflow-hidden bg-[#F3F7F5] w-full flex-col items-end gap-2 ${
-          isOpen ? "flex max-h-100 opacity-1 px-5 py-2" : " hidden max-h-0 opacity-0 py-0 px-0"
+        className={`transition-[max-height,opacity,padding] duration-600  overflow-hidden bg-[#F3F7F5] w-full flex flex-col items-center gap-2 ${
+          isOpen
+            ? "max-h-auto opacity-1 px-5 py-2"
+            : "max-h-0 opacity-0 py-0 px-0"
         }`}
-        style={{ fontSize: 14, transitionProperty: "max-height, opacity, padding" }}
+        style={{ fontSize: 14 }}
       >
         {links.map((link) => (
-          <li className="flex items-center" key={link.href}>
+          <li className="flex items-center w-full justify-end" key={link.href}>
             <a className="py-2 hover:underline" href={link.href}>
               {link.label}
             </a>

@@ -18,7 +18,6 @@ export default function Dropdown({ name, links }: DropdownProps) {
 
   function openMenu() {
     setIsOpen(!isOpen);
-    console.log("isOpen", isOpen);
   }
 
   return (
