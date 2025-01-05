@@ -5,36 +5,9 @@ import Link from "next/link";
 import { Cog6ToothIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
 import DropdownLg from "@/src/ui/header/dropdown-header";
+import Links from "./Links.json"
 
 export default function NavBarLG() {
-  const aboutAmana = {
-    name: "عن الأمانة",
-    links: [
-      { href: "#", label: "عن مدينة الرياض" },
-      { href: "##", label: "عن الأمانة" },
-      { href: "###", label: "البلديات" },
-      { href: "####", label: "أمناء الرياض" },
-      { href: "#####", label: "المبادرات و المشاريع" },
-      { href: "######", label: "شركاء الأمانة المحليين" },
-      { href: "#######", label: "إحصائيات البوابة" },
-      { href: "########", label: "التنمية المستدامة" },
-      { href: "#########", label: "الجوائز" },
-      { href: "##########", label: "الأمانة في أرقام" },
-    ],
-  };
-
-  const openDataSet = {
-    name: "البيانات المفتوحة",
-    links: [
-      { href: "#", label: "البيانات المفتوحة" },
-      { href: "##", label: "البيانات الحكومية المفتوحة" },
-      { href: "###", label: "مجموعات  البيانات" },
-      { href: "####", label: "البوابة الجيومكانية" },
-      { href: "#####", label: "طلب اضافة مفوض" },
-      { href: "######", label: "قصص نجاح البيانات المفتوحة" },
-    ],
-  };
-
   return (
     <div className="w-full max-md:hidden">
       <nav
@@ -76,7 +49,7 @@ export default function NavBarLG() {
             <DropdownLg
               gridCols="2"
               className="flex items-start justify-end gap-0.5"
-              {...aboutAmana}
+              {...Links.aboutAmana}
             />
 
             <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
@@ -93,7 +66,7 @@ export default function NavBarLG() {
 
             <DropdownLg
               gridCols="1"
-              {...openDataSet}
+              {...Links.openDataSet}
               className="flex items-start justify-end w-fit gap-0.5 flex-row-reverse"
             />
 

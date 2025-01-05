@@ -10,17 +10,18 @@ import { BiX } from "react-icons/bi";
 import { Cog6ToothIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import BurgerMenu from "./burger-menu";
 import { useState, useEffect } from "react";
+import Links from "./Links.json";
 
 export default function NavBarMS() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [openMenu, setOpenMenu] = useState('');
+  const [openMenu, setOpenMenu] = useState("");
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
 
-  const handleToggleMenu = (menuName : string) => {
-    setOpenMenu(openMenu === menuName ? '' : menuName);
+  const handleToggleMenu = (menuName: string) => {
+    setOpenMenu(openMenu === menuName ? "" : menuName);
   };
 
   useEffect(() => {
@@ -33,34 +34,6 @@ export default function NavBarMS() {
       document.body.style.overflow = "unset";
     };
   }, [isDropdownVisible]);
-
-  const aboutAmana = {
-    name: "عن الأمانة",
-    links: [
-      { href: "##", label: "عن الأمانة" },
-      { href: "#", label: "عن مدينة الرياض" },
-      { href: "####", label: "أمناء الرياض" },
-      { href: "###", label: "البلديات" },
-      { href: "######", label: "شركاء الأمانة المحليين" },
-      { href: "#####", label: "المبادرات و المشاريع" },
-      { href: "########", label: "التنمية المستدامة" },
-      { href: "#######", label: "إحصائيات البوابة" },
-      { href: "##########", label: "الأمانة في أرقام" },
-      { href: "#########", label: "الجوائز" },
-    ],
-  };
-
-  const openDataSet = {
-    name: "البيانات المفتوحة",
-    links: [
-      { href: "#", label: "البيانات المفتوحة" },
-      { href: "##", label: "البيانات الحكومية المفتوحة" },
-      { href: "###", label: "مجموعات  البيانات" },
-      { href: "####", label: "البوابة الجيومكانية" },
-      { href: "#####", label: "طلب اضافة مفوض" },
-      { href: "######", label: "قصص نجاح البيانات المفتوحة" },
-    ],
-  };
 
   return (
     <header
@@ -78,7 +51,10 @@ export default function NavBarMS() {
           {/* <BsList className="block w-6 h-6" strokeWidth={0.8} /> */}
 
           {isDropdownVisible ? (
-            <BiX className="block w-8 h-8 cursor-pointer" onClick={toggleDropdown} />
+            <BiX
+              className="block w-8 h-8 cursor-pointer"
+              onClick={toggleDropdown}
+            />
           ) : (
             <BsList
               className="block w-6 h-6 cursor-pointer"
@@ -87,7 +63,10 @@ export default function NavBarMS() {
             />
           )}
 
-          <Link href="/" className="flex items-center justify-between w-fit gap-4">
+          <Link
+            href="/"
+            className="flex items-center justify-between w-fit gap-4"
+          >
             <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
           </Link>
         </div>
@@ -104,11 +83,11 @@ export default function NavBarMS() {
         <div className="pt-6 w-full h-full flex flex-col justify-between">
           <div className="flex justify-center w-full">
             <ul className="flex flex-col w-full text-[#2C302F]">
-            <BurgerMenu
-                name={aboutAmana.name}
-                links={aboutAmana.links}
-                isOpen={openMenu === aboutAmana.name}
-                onToggle={() => handleToggleMenu(aboutAmana.name)}
+              <BurgerMenu
+                name={Links.aboutAmana.name}
+                links={Links.aboutAmana.links}
+                isOpen={openMenu === Links.aboutAmana.name}
+                onToggle={() => handleToggleMenu(Links.aboutAmana.name)}
               />
               <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <Link href="#">الخدمات الالكترونية</Link>
@@ -117,10 +96,10 @@ export default function NavBarMS() {
                 <Link href="#">الإعلام و الاتصال</Link>
               </li>
               <BurgerMenu
-                name={openDataSet.name}
-                links={openDataSet.links}
-                isOpen={openMenu === openDataSet.name}
-                onToggle={() => handleToggleMenu(openDataSet.name)}
+                name={Links.openDataSet.name}
+                links={Links.openDataSet.links}
+                isOpen={openMenu === Links.openDataSet.name}
+                onToggle={() => handleToggleMenu(Links.openDataSet.name)}
               />
               <li className="w-full flex justify-end mt-2 px-5 py-2">
                 <Link href="#">المشاركة الالكترونية</Link>
