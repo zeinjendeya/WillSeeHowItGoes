@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function CommentLG({ shown }: { shown: boolean }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
-  const [comment, setComment] = useState(false);
+  const [comment, setComment] = useState(true);
 
   const handleMouseEnter = (index: number) => {
     setHoverIndex(index);
@@ -31,25 +31,29 @@ export default function CommentLG({ shown }: { shown: boolean }) {
         <div className="bg-white ms-4 me-4 rounded-lg flex flex-col gap-8 px-4 py-8">
           <div className="w-full">
             <div className="p-6 relative shadow-component border border-[#e1e2e1] rounded-2xl bg-triangle-pattern">
-              <div className="flex flex-row-reverse items-center w-full gap-3">
+              <div className="flex flex-row-reverse lg:items-center items-start w-full gap-3">
                 <Image src={CommentSvg} alt="comment svg" />
-                <div className="flex flex-row-reverse justify-between w-full gap-4">
-                  <div className="flex flex-row-reverse items-center w-full gap-3">
-                    <h2 className="w-fit flex place-content-center font-bold text-md">
+
+                <div className="flex md:flex-row-reverse items-end flex-col justify-between w-full gap-4">
+                  <div className="flex md:flex-row-reverse flex-col md:items-center items-end w-full gap-3">
+                    <h2 className="w-fit text-right flex place-content-center font-bold text-md">
                       تعليقات واقتراحات
                     </h2>
+
                     <div className="w-[2px] h-full border border-grey-700 bg-grey-500"></div>
-                    <p className="font-normal place-content-center text-md">
+
+                    <p className="font-normal text-right place-content-center text-md">
                       للاستفسارات أو التعليقات حول الخدمات البلدية، يُرجى تعبئة
                       البيانات المطلوبة
                     </p>
                   </div>
+
                   <button
                     onClick={(e) => {
                       e.preventDefault();
                       toggleCommentView(null);
                     }}
-                    className="flex justify-center rounded-full text-white text-btn-sm w-1/5 flex px-6 py-3 bg-[#006946]"
+                    className="flex justify-center rounded-full text-white text-btn-sm md:w-1/5 w-2/5 flex px-6 py-3 bg-[#006946]"
                   >
                     أضف تعليق
                   </button>
@@ -184,7 +188,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                   <p className="label11">20/10/2024</p>
                 </div>
 
-                <p className="flex justify-end label11">
+                <p className="flex justify-end label11 text-right text-right">
                   الاستعلام عن معاملة الكترونية&nbsp;· وصف الخدمة. يقوم المستفيد
                   بالاستعلام عن المعاملة التي تم إنشاءها من قبله وآخر عملية تمت
                   عليها من الاتصالات الادارية · اخر تحديث
@@ -211,7 +215,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                   <p className="h6 line-clamp-3">مجيد مكارم</p>
                   <p className="label11">20/10/2024</p>
                 </div>
-                <p className="flex justify-end label11">
+                <p className="flex justify-end label11 text-right">
                   الاستعلام عن معاملة الكترونية&nbsp;· وصف الخدمة. يقوم المستفيد
                   بالاستعلام عن المعاملة التي تم إنشاءها من قبله وآخر عملية تمت
                   عليها من الاتصالات الادارية · اخر تحديث
@@ -238,7 +242,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                   <p className="h6 line-clamp-3">ولاء عبدالعزيز</p>
                   <p className="label11">20/10/2024</p>
                 </div>
-                <p className="flex justify-end label11">
+                <p className="flex justify-end label11 text-right">
                   الاستعلام عن معاملة الكترونية&nbsp;· وصف الخدمة. يقوم المستفيد
                   بالاستعلام عن المعاملة التي تم إنشاءها من قبله وآخر عملية تمت
                   عليها من الاتصالات الادارية · اخر تحديث
@@ -248,8 +252,8 @@ export default function CommentLG({ shown }: { shown: boolean }) {
           </div>
 
           <div className="w-full flex flex-col gap-4 p-7 border border-gray-300 rounded-2xl">
-            <div className=" flex flex-row-reverse justify-between">
-              <div className="flex flex-row-reverse gap-2 items-center">
+            <div className=" flex md:flex-row-reverse flex-col justify-between">
+              <div className="flex lg:flex-row-reverse gap-2 flex-col md:items-center items-end ">
                 <h6 className="text-sm font-bold">تقييمك للمحتوى</h6>
                 <div className="flex gap-1 flex-row-reverse items-center">
                   <div className="flex flex-row-reverse items-center">
@@ -272,29 +276,29 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                   <span className="label11">(22 تقييم)</span>
                 </div>
               </div>
-              <div className="text-btn-sm flex flex-row-reverse gap-2">
+              <div className="text-btn-sm flex flex-row-reverse gap-2 md:mt-0 mt-3">
                 <p className=" place-content-center">:اخر تحديث</p>
                 <p className=" place-content-center">02/11/2024</p>
               </div>
             </div>
             <hr className="text-gray-400" />
-            <div className="flex flex-row-reverse justify-between gap-3">
-              <div className="flex flex-row-reverse justify-end gap-3">
-                <h2 className="place-content-center text-btn-sm font-bold">
+            <div className="flex md:flex-row-reverse flex-col justify-between gap-3">
+              <div className="flex lg:flex-row-reverse flex-col justify-start gap-3 w-full">
+                <h2 className="place-content-end flex text-btn-sm font-bold">
                   هل كان المحتوي مفيد لك
                 </h2>
-                <div className="flex flex-row-reverse gap-2">
-                  <button className="label11 font-medium flex cursor-pointer items-center justify-center rounded-full text-center transition-opacity duration-300 ease-in-out hover:opacity-80 bg-green-100 w-full md:w-auto h-9 p2 text-green-700 gap-1.5 p-4">
+                <div className="flex flex-row-reverse lg:place-content-center place-content-end gap-2">
+                  <button className="label11 font-medium w-full flex cursor-pointer items-center justify-center rounded-full text-center hover:opacity-80 bg-green-100 w-full md:w-auto h-9 text-green-700 gap-1.5 p-4">
                     مفيد
                     <FaRegFaceSmile className=" w-5 h-5" />
                   </button>
-                  <button className="label11 font-medium flex cursor-pointer items-center justify-center rounded-full text-center transition-opacity duration-300 ease-in-out hover:opacity-80 bg-red-100 w-full md:w-auto h-9 p2 text-red-700 gap-1.5 p-4">
+                  <button className="label11 font-medium w-full flex cursor-pointer items-center justify-center rounded-full text-center hover:opacity-80 bg-red-100 w-full md:w-auto h-9 text-red-700 gap-1.5 p-4">
                     غير مفيد
                     <FaRegFaceFrownOpen className=" w-5 h-5" />
                   </button>
                 </div>
               </div>
-              <p className="text-btn-sm">
+              <p className="text-btn-sm w-full md:block flex lg:justify-start justify-end gap-1">
                 أعجب <span className="text-[#006946]">80</span> من الزوار بمحتوى
                 الصفحة من أصل <span className="text-[#006946]">98</span> مشاركة
               </p>
