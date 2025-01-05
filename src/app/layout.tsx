@@ -21,7 +21,7 @@ export default function RootLayout({
        <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="bg-[#f4f6f7]">
+      <body className="bg-Zwhite">
         <Header />
         {children}
         <Footer />

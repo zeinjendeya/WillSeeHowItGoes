@@ -16,6 +16,7 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        Zwhite : '#f4f6f7',
       },
     },
     keyframes: {
