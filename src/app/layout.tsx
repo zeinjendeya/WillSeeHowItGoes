@@ -1,8 +1,7 @@
 import "tailwind.config";
 import { Metadata } from "next";
 import Footer from "../ui/footer/footer";
-import NavBarLG from "../ui/header/nav-bar-lg";
-import NavBarMS from "../ui/header/nav-bar-ms";
+import Header from "../ui/header/index"
 import './global.css';
 import Head from 'next/head';
 
@@ -23,8 +22,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="bg-[#f4f6f7]">
-        <NavBarLG />
-        <NavBarMS />
+        <Header />
         {children}
         <Footer />
       </body>
