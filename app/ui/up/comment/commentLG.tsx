@@ -53,7 +53,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                       e.preventDefault();
                       toggleCommentView(null);
                     }}
-                    className="flex justify-center rounded-full text-white text-btn-sm md:w-1/5 w-2/5 flex px-6 py-3 bg-[#006946]"
+                    className="justify-center rounded-full text-white text-btn-sm md:w-1/5 w-2/5 flex px-6 py-3 bg-[#006946]"
                   >
                     أضف تعليق
                   </button>
@@ -133,7 +133,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                     <input
                       type="checkbox"
                       id="terms"
-                      className="border-gray-400 border-[2px] h-5 w-5 rounded-sm border"
+                      className="border-gray-400 border-[2px] h-5 w-5 rounded-sm"
                     />
                     <label className="p1 pe-3">
                       اوافق على الشروط والاحكام و سياسة الخصوصية واتحمل مسؤولية
@@ -172,7 +172,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
               <svg
                 stroke="currentColor"
                 fill="#9c9d9c"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 496 512"
                 className="flex justify-center items-center w-16 h-16"
                 height="1em"
@@ -188,7 +188,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                   <p className="label11">20/10/2024</p>
                 </div>
 
-                <p className="flex justify-end label11 text-right text-right">
+                <p className="flex justify-end label11 text-right">
                   الاستعلام عن معاملة الكترونية&nbsp;· وصف الخدمة. يقوم المستفيد
                   بالاستعلام عن المعاملة التي تم إنشاءها من قبله وآخر عملية تمت
                   عليها من الاتصالات الادارية · اخر تحديث
@@ -200,7 +200,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
               <svg
                 stroke="currentColor"
                 fill="#9c9d9c"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 496 512"
                 className="flex justify-center items-center w-16 h-16"
                 height="1em"
@@ -227,7 +227,7 @@ export default function CommentLG({ shown }: { shown: boolean }) {
               <svg
                 stroke="currentColor"
                 fill="#9c9d9c"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 496 512"
                 className="flex justify-center items-center w-16 h-16"
                 height="1em"
@@ -288,11 +288,11 @@ export default function CommentLG({ shown }: { shown: boolean }) {
                   هل كان المحتوي مفيد لك
                 </h2>
                 <div className="flex flex-row-reverse lg:place-content-center place-content-end gap-2">
-                  <button className="label11 font-medium w-full flex cursor-pointer items-center justify-center rounded-full text-center hover:opacity-80 bg-green-100 w-full md:w-auto h-9 text-green-700 gap-1.5 p-4">
+                  <button className="label11 font-medium flex cursor-pointer items-center justify-center rounded-full text-center hover:opacity-80 bg-green-100 w-full md:w-auto h-9 text-green-700 gap-1.5 p-4">
                     مفيد
                     <FaRegFaceSmile className=" w-5 h-5" />
                   </button>
-                  <button className="label11 font-medium w-full flex cursor-pointer items-center justify-center rounded-full text-center hover:opacity-80 bg-red-100 w-full md:w-auto h-9 text-red-700 gap-1.5 p-4">
+                  <button className="label11 font-medium flex cursor-pointer items-center justify-center rounded-full text-center hover:opacity-80 bg-red-100 w-full md:w-auto h-9 text-red-700 gap-1.5 p-4">
                     غير مفيد
                     <FaRegFaceFrownOpen className=" w-5 h-5" />
                   </button>
