@@ -6,11 +6,10 @@ interface List {
 }
 
 interface BreadcrumbProps {
-  page: string;
   links: List[];
 }
 
-export default function Breadcrumb({ page, links }: BreadcrumbProps) {
+export default function Breadcrumb({ links }: BreadcrumbProps) {
   return (
     <div className=" ms-4 me-4 mb-5 rounded-b-3xl bg-[#d7e5de] label12 flex items-center justify-end px-4 py-2 lg:px-6 lg:py-2">
       <nav aria-label="breadcrumb">

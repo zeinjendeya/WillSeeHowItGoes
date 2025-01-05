@@ -3,6 +3,7 @@
 import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
+import Link from "next/link";
 import HeaderTag from "./header-tag";
 import { BsList } from "react-icons/bs";
 import { BiX } from "react-icons/bi";
@@ -86,9 +87,9 @@ export default function NavBarMS() {
             />
           )}
 
-          <a href="/" className="flex items-center justify-between w-fit gap-4">
+          <Link href="/" className="flex items-center justify-between w-fit gap-4">
             <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
-          </a>
+          </Link>
         </div>
 
         <HeaderTag px="px-4" show={true} h1_size={24} h6_size={12} />
@@ -110,10 +111,10 @@ export default function NavBarMS() {
                 onToggle={() => handleToggleMenu(aboutAmana.name)}
               />
               <li className="w-full flex justify-end mt-2 px-5 py-2">
-                <a href="#">الخدمات الالكترونية</a>
+                <Link href="#">الخدمات الالكترونية</Link>
               </li>
               <li className="w-full flex justify-end mt-2 px-5 py-2">
-                <a href="#">الإعلام و الاتصال</a>
+                <Link href="#">الإعلام و الاتصال</Link>
               </li>
               <BurgerMenu
                 name={openDataSet.name}
@@ -122,28 +123,29 @@ export default function NavBarMS() {
                 onToggle={() => handleToggleMenu(openDataSet.name)}
               />
               <li className="w-full flex justify-end mt-2 px-5 py-2">
-                <a href="#">المشاركة الالكترونية</a>
+                <Link href="#">المشاركة الالكترونية</Link>
               </li>
             </ul>
           </div>
 
           <div className="bg-[#F3F7F5] flex justify-between flex-row-reverse px-3 py-4 mt-8">
             <div className=" w-[12rem] lg:hidden flex justify-center">
-              <a
+              <Link
+                href="#"
                 style={{ fontSize: 12 }}
                 className="bg-[#006946] text-white w-fit flex items-center justify-center lg:px-0 lg:py-0 px-6 py-2 rounded-full hover:text-white"
               >
                 تسجيل الدخول
-              </a>
+              </Link>
             </div>
             <div className="items-center justify-start w-full gap-4 px-4 pt-2 pb-2 flex text-green-800">
-              <a
+              <Link
                 className="flex items-center transition-colors text-base cursor-pointer bg-transparent hover:bg-transparent hover:no-underline undefined"
                 href="#"
                 style={{ fontSize: 14 }}
               >
                 EN
-              </a>
+              </Link>
               <Cog6ToothIcon
                 stroke="currentColor"
                 fill="none"

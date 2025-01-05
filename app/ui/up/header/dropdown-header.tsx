@@ -18,7 +18,7 @@ interface DropdownProps {
 export default function DropdownLg({ name, links, className, gridCols }: DropdownProps & { className?: string } & { gridCols?: string }) {
     return (
         <li className={`relative group/main block text-left ${className}`}>
-            <a
+            <Link
                 href="#"
                 className="relative group flex items-center justify-between w-full text-sm font-medium focus:outline-none"
             >
@@ -29,7 +29,7 @@ export default function DropdownLg({ name, links, className, gridCols }: Dropdow
                     />
                 </span>
                 {name}
-            </a>
+            </Link>
 
             <ul
                 className={`absolute grid grid-cols-${gridCols} right-0 mt-2 pt-5 pb-10 ps-10 pe-14 w-[max-content] bg-pattern bg-no-repeat bg-left bg-x-10 gap-4 origin-top-right rounded-md shadow-lg bg-white overflow-hidden shadow-light opacity-0 invisible translate-y-1 transition-all duration-300 ease-in-out group-hover/main:opacity-100 group-hover/main:visible group-hover/main:translate-y-2`}

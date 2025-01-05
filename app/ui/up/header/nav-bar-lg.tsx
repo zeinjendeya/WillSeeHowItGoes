@@ -1,6 +1,7 @@
 import SvgSrc from "@/public/AmanaLogo.svg";
 import NavBG from "@/public/nav-bg.jpg";
 import Image from "next/image";
+import Link from "next/link";
 import { Cog6ToothIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
 import DropdownLg from "@/app/ui/up/header/dropdown-header";
@@ -59,12 +60,13 @@ export default function NavBarLG() {
 
         <div className="flex items-center justify-between w-full">
           <div className=" w-[12em] flex justify-center">
-            <a
+            <Link 
+              href="#"
               style={{ fontSize: 18 }}
               className="bg-white text-green-800 w-56 flex justify-center px-8 py-4  rounded-full hover:bg-green-600 hover:text-white"
             >
               تسجيل الدخول
-            </a>
+            </Link>
           </div>
 
           <ul
@@ -78,15 +80,15 @@ export default function NavBarLG() {
             />
 
             <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
-              <a href="#" className="flex items-center gap-0.5">
+              <Link href="#" className="flex items-center gap-0.5">
                 الخدمات الالكترونية
-              </a>
+              </Link>
             </li>
 
             <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
-              <a href="#" className="flex items-center gap-0.5">
+              <Link href="#" className="flex items-center gap-0.5">
                 الإعلام و الاتصال
-              </a>
+              </Link>
             </li>
 
             <DropdownLg
@@ -96,15 +98,15 @@ export default function NavBarLG() {
             />
 
             <li className="flex items-start gap-0.5 flex-row-reverse justify-end w-fit">
-              <a href="#" className="flex items-center gap-0.5">
+              <Link href="#" className="flex items-center gap-0.5">
                 المشاركة الالكترونية
-              </a>
+              </Link>
             </li>
           </ul>
 
-          <a href="/" className="flex items-center justify-between md:w-fit gap-4">
+          <Link href="/" className="flex items-center justify-between md:w-fit gap-4">
             <Image src={SvgSrc} alt="Amana Logo" width={300} height={93} />
-          </a>
+          </Link>
         </div>
         <HeaderTag px="px-8" show={true} h1_size={32} h6_size={18} />
       </nav>
