@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FaRegFaceFrownOpen, FaRegFaceSmile } from "react-icons/fa6";
 import { useState } from "react";
 
-export default function CommentLG() {
+export default function CommentLG({shown} : {shown: boolean}) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const handleMouseEnter = (index: number) => {
@@ -17,7 +17,8 @@ export default function CommentLG() {
   };
 
   return (
-    <div className="section-container flex flex-col relative px-6 py-2">
+    shown && (
+      <div className="section-container flex flex-col relative px-6 py-2">
       <div className="bg-white ms-4 me-4 rounded-lg flex flex-col gap-8 px-4 py-8">
         <div className="w-full">
           <div className="p-6 relative shadow-component border border-[#e1e2e1] rounded-2xl bg-triangle-pattern">
@@ -180,5 +181,6 @@ export default function CommentLG() {
         </div>
       </div>
     </div>
+    )
   );
 }

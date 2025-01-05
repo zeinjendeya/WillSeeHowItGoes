@@ -13,7 +13,7 @@ export default function Page(){
         <div className="section-container flex flex-col relative">
           <Breadcrumb {...breadcrumbs} />
         </div>
-        <CommentLG />
+        <CommentLG shown={true} />
       </main>
   );
 }
