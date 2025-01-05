@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Footer from "./ui/footer/footer";
 import NavBarLG from "./ui/header/nav-bar-lg";
 import NavBarMS from "./ui/header/nav-bar-ms";
-import './ui/global.css';
+import './global.css';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
