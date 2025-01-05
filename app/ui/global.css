@@ -56,7 +56,31 @@ input[type='number']::-webkit-outer-spin-button {
   line-height: 24px;
 }
 
+.text-md {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text-btn-sm {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.label11 {
+  font-size: 12px;
+  line-height: normal;
+}
+
 .label12 {
   font-size: 10px;
   line-height: normal;
+}
+
+.bg-triangle-pattern {
+  background-image: linear-gradient(90deg,hsla(0,0%,100%,.9),#fff 25%), url('/card-pattern.svg'); 
+}
+
+.shadow-component {
+  --tw-shadow: 0px 4px 10px 0px #7e7e7e0d !important;
+  --tw-shadow-colored: 0px 4px 10px 0px var(--tw-shadow-color) !important;
 }
