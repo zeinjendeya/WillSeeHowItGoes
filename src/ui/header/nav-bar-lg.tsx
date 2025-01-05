@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Cog6ToothIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
-import DropdownLg from "@/app/ui/header/dropdown-header";
+import DropdownLg from "@/src/ui/header/dropdown-header";
 
 export default function NavBarLG() {
   const aboutAmana = {

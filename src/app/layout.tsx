@@ -1,8 +1,8 @@
 import "tailwind.config";
 import { Metadata } from "next";
-import Footer from "./ui/footer/footer";
-import NavBarLG from "./ui/header/nav-bar-lg";
-import NavBarMS from "./ui/header/nav-bar-ms";
+import Footer from "../ui/footer/footer";
+import NavBarLG from "../ui/header/nav-bar-lg";
+import NavBarMS from "../ui/header/nav-bar-ms";
 import './global.css';
 import Head from 'next/head';
 

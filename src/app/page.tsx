@@ -1,5 +1,5 @@
-import CommentLG from "./ui/comment/commentLG";
-import Breadcrumb from "./ui/elements/breadcrumb";
+import CommentLG from "../ui/comment/commentLG";
+import Breadcrumb from "../ui/elements/breadcrumb";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 
 export default function Page(){
