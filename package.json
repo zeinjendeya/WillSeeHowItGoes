@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md,json}\""
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -19,6 +20,7 @@
     "next": "^15.1.0",
     "next-auth": "5.0.0-beta.19",
     "postcss": "8.4.49",
+    "prettier": "^3.4.2",
     "punycode": "^2.3.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",

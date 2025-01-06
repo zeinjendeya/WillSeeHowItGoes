@@ -23,12 +23,18 @@ export default function Footer() {
 
         <FooterListMd />
         <FooterListLg />
-        
       </div>
 
-      <div className="flex text-white lg:flex-row-reverse items-center flex-col-reverse lg:justify-between justify-center bg-[#01543A] px-8 py-7" style={{ fontSize: 14 }}>
-        <p className="w-fit py-2  lg:py-0">جميع حقوق الطبع محفوظةلأمانة منطقة الرياض © 2024</p>
-        <a className="w-fit py-2  lg:py-0" href="/sitemap">خريطة الموقع</a>
+      <div
+        className="flex text-white lg:flex-row-reverse items-center flex-col-reverse lg:justify-between justify-center bg-[#01543A] px-8 py-7"
+        style={{ fontSize: 14 }}
+      >
+        <p className="w-fit py-2  lg:py-0">
+          جميع حقوق الطبع محفوظةلأمانة منطقة الرياض © 2024
+        </p>
+        <a className="w-fit py-2  lg:py-0" href="/sitemap">
+          خريطة الموقع
+        </a>
         <div className="flex lg:justify-end justify-around w-fit  flex-row-reverse items-center py-2 lg:py-0">
           <span className="ms-3">
             <RiLinkedinBoxLine className="w-6 h-6" />

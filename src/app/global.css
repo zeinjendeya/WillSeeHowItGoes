@@ -2,31 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
-  font-family: 'BahijTheSansArabic';
-  src: url('../../public/fonts/Bahij_TheSansArabic-Bold.ttf') format('truetype');
+  font-family: "BahijTheSansArabic";
+  src: url("../../public/fonts/Bahij_TheSansArabic-Bold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BahijTheSansArabic';
-  src: url('../../public/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+  font-family: "BahijTheSansArabic";
+  src: url("../../public/fonts/Bahij_TheSansArabic-Plain.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BahijTheSansArabic';
-  src: url('../../public/fonts/Bahij_TheSansArabic-SemiBold.ttf') format('truetype');
+  font-family: "BahijTheSansArabic";
+  src: url("../../public/fonts/Bahij_TheSansArabic-SemiBold.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 * {
-  font-family: 'BahijTheSansArabic';
+  font-family: "BahijTheSansArabic";
 }
 
 .section-container {
@@ -36,7 +36,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 
 .text-sm {
   font-size: 16px;
@@ -64,7 +63,8 @@
 }
 
 .bg-triangle-pattern {
-  background-image: linear-gradient(90deg,hsla(0,0%,100%,.9),#fff 25%), url('/card-pattern.svg'); 
+  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0.9), #fff 25%),
+    url("/card-pattern.svg");
 }
 
 .shadow-component {

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Cog6ToothIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import HeaderTag from "./header-tag";
 import DropdownLg from "@/src/ui/header/dropdown-header";
-import Links from "./Links.json"
+import Links from "./Links.json";
 
 export default function NavBarLG() {
   return (
@@ -33,7 +33,7 @@ export default function NavBarLG() {
 
         <div className="flex items-center justify-between w-full">
           <div className=" w-[12em] flex justify-center">
-            <Link 
+            <Link
               href="#"
               style={{ fontSize: 18 }}
               className="bg-white text-green-800 w-56 flex justify-center px-8 py-4  rounded-full hover:bg-green-600 hover:text-white"
@@ -77,7 +77,10 @@ export default function NavBarLG() {
             </li>
           </ul>
 
-          <Link href="/" className="flex items-center justify-between md:w-fit gap-4">
+          <Link
+            href="/"
+            className="flex items-center justify-between md:w-fit gap-4"
+          >
             <Image src={SvgSrc} alt="Amana Logo" width={300} height={93} />
           </Link>
         </div>

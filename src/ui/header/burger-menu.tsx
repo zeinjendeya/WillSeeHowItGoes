@@ -41,8 +41,8 @@ export default function BurgerMenu({
         }`}
         style={{ fontSize: 14 }}
       >
-        {links.map((link) => (
-          <li className="flex items-center w-full justify-end" key={link.href}>
+        {links.map((link, index) => (
+          <li className="flex items-center w-full justify-end" key={index}>
             <a className="py-2 hover:underline" href={link.href}>
               {link.label}
             </a>

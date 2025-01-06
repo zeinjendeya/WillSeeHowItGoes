@@ -19,9 +19,9 @@ export default function FooterUl({ name, links }: DropdownProps) {
         className="w-full flex flex-col pt-4 h-auto items-end gap-2"
         style={{ fontSize: 14 }}
       >
-        {links.map((link) => {
+        {links.map((link, index) => {
           return (
-            <li className="flex items-center" key={link.href}>
+            <li className="flex items-center" key={index}>
               <a href={`${link.href}`}>{link.label}</a>
             </li>
           );

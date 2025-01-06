@@ -1,6 +1,18 @@
-export default function HeaderTag({show, px, h1_size, h6_size}: {show: boolean, px: string, h1_size: number, h6_size: number}) {
+export default function HeaderTag({
+  show,
+  px,
+  h1_size,
+  h6_size,
+}: {
+  show: boolean;
+  px: string;
+  h1_size: number;
+  h6_size: number;
+}) {
   return (
-    <div className={`${show ? "flex" : "hidden"} justify-end items-center mx-auto py-7 ${px}`}>
+    <div
+      className={`${show ? "flex" : "hidden"} justify-end items-center mx-auto py-7 ${px}`}
+    >
       <div className="flex flex-col justify-end">
         <h1
           style={{ fontSize: h1_size }}

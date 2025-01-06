@@ -50,20 +50,20 @@ export default function Dropdown({ name, links }: DropdownProps) {
         </span>
       </div>
 
-        <ul
-          className={`transition-max-height duration-300 ease-in-out overflow-hidden w-full flex flex-col items-end gap-2 ${
-            isOpen ? "max-h-96" : "max-h-0"
-          }`}
-          style={{ fontSize: 14 }}
-        >
-          {links.map((link) => {
-            return (
-              <li className="flex items-center" key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            );
-          })}
-        </ul>
+      <ul
+        className={`transition-max-height duration-300 ease-in-out overflow-hidden w-full flex flex-col items-end gap-2 ${
+          isOpen ? "max-h-96" : "max-h-0"
+        }`}
+        style={{ fontSize: 14 }}
+      >
+        {links.map((link, index) => {
+          return (
+            <li className="flex items-center" key={index}>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
