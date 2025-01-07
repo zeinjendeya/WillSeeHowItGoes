@@ -14,7 +14,7 @@ export default function CommentSection({
 
       <div className="grid w-full grid-cols-1 gap-6">
         <div className="mt-4 flex flex-col justify-end gap-2 w-full">
-          <label className="text-gray-800 flex justify-end">
+          <label className="text-black flex justify-end">
             <span className="flex flex-row-reverse text-btn-sm">
               :الاسم<span className="text-red-400"> *</span>
             </span>
@@ -22,14 +22,14 @@ export default function CommentSection({
           <input
             type="text"
             autoComplete="on"
-            className="font-medium w-full rounded-[10px] border   border-gray-300 px-3 py-2 bg-white text-sm placeholder:text-grey-500 text-right"
+            className="font-medium w-full rounded-[10px] border border-gray-300 px-3 py-2 bg-white text-sm placeholder:text-gray-900 text-right"
             id="name"
             placeholder=":الاسم"
           />
         </div>
 
         <div className="mt-4 flex flex-col justify-end gap-2 w-full">
-          <label className="text-gray-800 flex justify-end">
+          <label className="text-black flex justify-end">
             <span className="flex flex-row-reverse text-btn-sm">
               :رقم الجوال<span className="text-red-400"> *</span>
             </span>
@@ -37,14 +37,14 @@ export default function CommentSection({
           <input
             type="number"
             autoComplete="on"
-            className="font-medium w-full rounded-[10px] border   border-gray-300 px-3 py-2 bg-white text-sm placeholder:text-grey-500 text-right"
+            className="font-medium w-full rounded-[10px] border border-gray-300 px-3 py-2 bg-white text-sm placeholder:text-gray-900 text-right"
             id="mobileNumber"
             placeholder=":رقم الجوال"
           />
         </div>
 
         <div className="mt-4 flex flex-col justify-end gap-2 w-full">
-          <label className="text-gray-800 flex justify-end">
+          <label className="text-black flex justify-end">
             <span className="flex flex-row-reverse text-btn-sm">
               :البريد الالكتروني
               <span className="text-red-400"> *</span>
@@ -53,14 +53,14 @@ export default function CommentSection({
           <input
             type="email"
             autoComplete="on"
-            className="font-medium w-full rounded-[10px] border border-gray-300 px-3 py-2 bg-white text-sm placeholder:text-grey-500 text-right"
+            className="font-medium w-full rounded-[10px] border border-gray-300 px-3 py-2 bg-white text-sm placeholder:text-gray-900 text-right"
             id="email"
             placeholder=":البريد الالكتروني"
           />
         </div>
 
         <div className="mt-4 flex flex-col justify-end gap-2 w-full">
-          <label className="text-gray-800 flex justify-end">
+          <label className="text-black flex justify-end">
             <span className="flex flex-row-reverse text-btn-sm">
               :التعليق<span className="text-red-400"> *</span>
             </span>
@@ -68,7 +68,7 @@ export default function CommentSection({
           <textarea
             autoComplete="on"
             rows={3}
-            className="font-medium w-full rounded-[10px] border border-gray-300 px-3 py-2 bg-white text-sm text-right placeholder:text-grey-500"
+            className="font-medium w-full rounded-[10px] border border-gray-300 px-3 py-2 bg-white text-sm text-right placeholder:text-gray-900"
             id="comment"
             placeholder="التعليق"
           ></textarea>
