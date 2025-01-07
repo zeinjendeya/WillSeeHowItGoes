@@ -8,7 +8,7 @@ export default function Comment({
   comment: string;
 }) {
   return (
-    <div className="w-full flex flex-row-reverse gap-3 p-4 rounded-lg bg-[#f0f0f0] mt-4 border border-[#f0f0f0]">
+    <div className="w-full flex flex-row-reverse gap-3 p-4 rounded-lg bg-gray-100 mt-4 border border-gray-100">
       <svg
         stroke="currentColor"
         fill="#9c9d9c"

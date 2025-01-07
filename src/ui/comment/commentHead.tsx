@@ -9,7 +9,7 @@ export default function CommentHead({
   toggleCommentView,
 }: toggleCommentViewFunc) {
   return (
-    <div className="p-6 relative shadow-component border border-[#e1e2e1] rounded-2xl bg-triangle-pattern">
+    <div className="p-6 relative shadow-component border border-gray-500 rounded-2xl bg-triangle-pattern">
       <div className="flex flex-row-reverse lg:items-center items-start w-full gap-3">
         <Image src={CommentSvg} alt="comment svg" />
 
