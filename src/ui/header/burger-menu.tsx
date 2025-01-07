@@ -34,12 +34,11 @@ export default function BurgerMenu({
       </div>
 
       <ul
-        className={`transition-[max-height,opacity,padding] duration-600  overflow-hidden bg-[#F3F7F5] w-full flex flex-col items-center gap-2 ${
+        className={`transition-[max-height,opacity,padding] text-btn-sm duration-600  overflow-hidden bg-[#F3F7F5] w-full flex flex-col items-center gap-2 ${
           isOpen
             ? "max-h-auto opacity-1 px-5 py-2"
             : "max-h-0 opacity-0 py-0 px-0"
         }`}
-        style={{ fontSize: 14 }}
       >
         {links.map((link, index) => (
           <li className="flex items-center w-full justify-end" key={index}>

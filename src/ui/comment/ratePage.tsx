@@ -4,7 +4,7 @@ export default function RatePage() {
   return (
     <div className=" flex md:flex-row-reverse flex-col justify-between">
       <div className="flex lg:flex-row-reverse gap-2 flex-col md:items-center items-end ">
-        <h6 className="text-sm font-bold">تقييمك للمحتوى</h6>
+        <h6 className="h6">تقييمك للمحتوى</h6>
         <Rating />
       </div>
 

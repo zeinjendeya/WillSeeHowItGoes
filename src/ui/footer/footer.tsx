@@ -26,8 +26,7 @@ export default function Footer() {
       </div>
 
       <div
-        className="flex text-white lg:flex-row-reverse items-center flex-col-reverse lg:justify-between justify-center bg-[#01543A] px-8 py-7"
-        style={{ fontSize: 14 }}
+        className="flex text-btn-sm text-white lg:flex-row-reverse items-center flex-col-reverse lg:justify-between justify-center bg-green-600 px-8 py-7"
       >
         <p className="w-fit py-2  lg:py-0">
           جميع حقوق الطبع محفوظةلأمانة منطقة الرياض © 2024

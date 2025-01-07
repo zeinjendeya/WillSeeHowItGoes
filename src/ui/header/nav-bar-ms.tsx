@@ -71,7 +71,7 @@ export default function NavBarMS() {
           </Link>
         </div>
 
-        <HeaderTag px="px-4" show={true} h1_size={24} h6_size={12} />
+        <HeaderTag px="px-4" show={true} h1="h4" h6="h5-sm" />
       </nav>
       <div
         className={`bg-white transition-all w-full duration-300 dynamic-top ease-in-out ${
@@ -111,17 +111,15 @@ export default function NavBarMS() {
             <div className=" w-[12rem] lg:hidden flex justify-center">
               <Link
                 href="#"
-                style={{ fontSize: 12 }}
-                className="bg-[#006946] text-white w-fit flex items-center justify-center lg:px-0 lg:py-0 px-6 py-2 rounded-full hover:text-white"
+                className="bg-[#006946] label11 text-white w-fit flex items-center justify-center lg:px-0 lg:py-0 px-6 py-2 rounded-full hover:text-white"
               >
                 تسجيل الدخول
               </Link>
             </div>
             <div className="items-center justify-start w-full gap-4 px-4 pt-2 pb-2 flex text-green-800">
               <Link
-                className="flex items-center transition-colors text-base cursor-pointer bg-transparent hover:bg-transparent hover:no-underline undefined"
+                className="flex items-center text-btn-sm transition-colors text-base cursor-pointer bg-transparent hover:bg-transparent hover:no-underline undefined"
                 href="#"
-                style={{ fontSize: 14 }}
               >
                 EN
               </Link>

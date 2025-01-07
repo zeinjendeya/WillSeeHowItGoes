@@ -16,9 +16,8 @@ export default function NavBarLG() {
       >
         <div className="items-center justify-start w-full gap-4 px-4 pt-2 pb-2 flex">
           <a
-            className="flex items-center transition-colors text-base cursor-pointer bg-transparent p1 text-white hover:bg-transparent hover:no-underline undefined"
+            className="flex items-center text-btn-sm transition-colors text-base cursor-pointer bg-transparent p1 text-white hover:bg-transparent hover:no-underline undefined"
             href="#"
-            style={{ fontSize: 14 }}
           >
             EN
           </a>
@@ -35,16 +34,14 @@ export default function NavBarLG() {
           <div className=" w-[12em] flex justify-center">
             <Link
               href="#"
-              style={{ fontSize: 18 }}
-              className="bg-white text-green-800 w-56 flex justify-center px-8 py-4  rounded-full hover:bg-green-600 hover:text-white"
+              className="bg-white text-green-800 text-md w-56 flex justify-center px-8 py-4  rounded-full hover:bg-green-600 hover:text-white"
             >
               تسجيل الدخول
             </Link>
           </div>
 
           <ul
-            style={{ fontSize: 14 }}
-            className="flex gap-5 justify-center flex-row-reverse w-full"
+            className="flex gap-5 text-btn-sm justify-center flex-row-reverse w-full"
           >
             <DropdownLg
               gridCols="2"
@@ -84,7 +81,7 @@ export default function NavBarLG() {
             <Image src={SvgSrc} alt="Amana Logo" width={300} height={93} />
           </Link>
         </div>
-        <HeaderTag px="px-8" show={true} h1_size={32} h6_size={18} />
+        <HeaderTag px="px-8" show={true} h1="h4" h6="h6" />
       </nav>
     </div>
   );

@@ -25,8 +25,7 @@ export default function Dropdown({ name, links }: DropdownProps) {
       <div className="w-full flex flex-row-reverse justify-between">
         <a
           href="#"
-          className="w-fit font-bold"
-          style={{ fontSize: 18 }}
+          className="w-fit h5"
           onClick={(e) => {
             e.preventDefault();
             openMenu();
@@ -51,10 +50,9 @@ export default function Dropdown({ name, links }: DropdownProps) {
       </div>
 
       <ul
-        className={`transition-max-height duration-300 ease-in-out overflow-hidden w-full flex flex-col items-end gap-2 ${
+        className={`transition-max-height text-btn-sm duration-300 ease-in-out overflow-hidden w-full flex flex-col items-end gap-2 ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}
-        style={{ fontSize: 14 }}
       >
         {links.map((link, index) => {
           return (

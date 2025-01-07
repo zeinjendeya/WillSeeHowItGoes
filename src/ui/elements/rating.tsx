@@ -17,12 +17,11 @@ export default function Rating() {
         {[0, 1, 2, 3, 4].map((index) => (
           <span
             key={index}
-            className={`h4 cursor-pointer transition-colors duration-200 ${
+            className={`h4 cursor-pointer text-lg transition-colors duration-200 ${
               hoverIndex !== null && index <= hoverIndex
                 ? "text-yellow-500"
                 : "text-gray-400"
             }`}
-            style={{ fontSize: 20 }}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
