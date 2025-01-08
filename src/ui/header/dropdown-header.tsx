@@ -1,6 +1,6 @@
 "use client";
 
-import subNav from "@/public/subNavigationCard.svg";
+
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { BiSolidLeftArrow } from "react-icons/bi";
@@ -46,7 +46,7 @@ export default function DropdownLg({
           >
             <Link
               href={link.href}
-              className="items-center flex flex-row justify-between py-1.5 px-0 p1 text-sm text-gray-700 hover:text-green-600 transition-transform duration-500 ease-in-out transform hover:translate-x-2"
+              className="items-center flex flex-row justify-between py-1.5 px-0 p1 text-sm text-gray-950 hover:text-green-600 transition-transform duration-500 ease-in-out transform hover:translate-x-2"
             >
               {link.label}
               <span className="hidden group-hover/sub:block ms-1 transition-opacity duration-500 ease-in-out">
@@ -56,23 +56,6 @@ export default function DropdownLg({
           </li>
         ))}
       </ul>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        .bg-pattern {
-          background-image: url("${subNav.src}");
-        }
-        .bg-x-10 {
-          background-position: 5% center;
-        }
-      `}</style>
     </li>
   );
 }

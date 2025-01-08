@@ -140,3 +140,19 @@
   --tw-shadow: 0px 4px 10px 0px #7e7e7e0d !important;
   --tw-shadow-colored: 0px 4px 10px 0px var(--tw-shadow-color) !important;
 }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bg-pattern {
+  background-image: url("../../public/subNavigationCard.svg");
+}
+.bg-x-10 {
+  background-position: 5% center;
+}
