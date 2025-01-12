@@ -1,10 +1,10 @@
 interface User {
-    name: string;
-    email: string;
-    address: {
-        street: string;
-        city: string;
-    }
+  name: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+  };
 }
 
 export default async function UserCard() {
@@ -17,8 +17,11 @@ export default async function UserCard() {
 
   return (
     <>
-      {users.map((user : User, index : number) => (
-        <div key={index} className="bg-white flex flex-col max-sm:w-56 w-full px-8 py-6 text-center items-center rounded-md border border-gray-500 shadow-sm">
+      {users.map((user: User, index: number) => (
+        <div
+          key={index}
+          className="bg-white flex flex-col max-sm:w-56 w-full px-8 py-6 text-center items-center rounded-md border border-gray-500 shadow-sm"
+        >
           <svg
             stroke="currentColor"
             fill="#9c9d9c"
@@ -34,7 +37,9 @@ export default async function UserCard() {
           <div className="flex flex-col">
             <p className="text-sm max-sm:text-btn-sm">{user.name}</p>
             <p className="label11 text-green-400">{user.email}</p>
-            <p className="label11 ">{user.address.street + " - " + user.address.city}</p>
+            <p className="label11 ">
+              {user.address.street + " - " + user.address.city}
+            </p>
           </div>
         </div>
       ))}

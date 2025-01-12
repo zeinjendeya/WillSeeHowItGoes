@@ -38,7 +38,8 @@ export default function CommentLG({ shown }: { shown: boolean }) {
             </h2>
 
             {Comments.map((comment, index) => (
-              <Comment key={index}
+              <Comment
+                key={index}
                 name={comment.name}
                 time={comment.time}
                 comment={comment.comment}

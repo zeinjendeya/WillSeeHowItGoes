@@ -17,17 +17,27 @@ export default function Footer() {
     <footer className="w-full flex flex-col justify-between mt-14">
       <div className="flex justify-between lg:flex-row-reverse flex-col bg-green-500 gap-4 px-8 py-8">
         <div className="lg:w-1/4 w-full flex flex-col gap-4 items-center justify-between">
-          <Image src={Logo} className="h-auto" alt="logo" width={159} height={159} />
-          <Image src={Vision} className="h-auto" alt="logo" width={159} height={159} />
+          <Image
+            src={Logo}
+            className="h-auto"
+            alt="logo"
+            width={159}
+            height={159}
+          />
+          <Image
+            src={Vision}
+            className="h-auto"
+            alt="logo"
+            width={159}
+            height={159}
+          />
         </div>
 
         <FooterListMd />
         <FooterListLg />
       </div>
 
-      <div
-        className="flex text-btn-sm text-white lg:flex-row-reverse items-center flex-col-reverse lg:justify-between justify-center bg-green-600 px-8 py-7"
-      >
+      <div className="flex text-btn-sm text-white lg:flex-row-reverse items-center flex-col-reverse lg:justify-between justify-center bg-green-600 px-8 py-7">
         <p className="w-fit py-2  lg:py-0">
           جميع حقوق الطبع محفوظةلأمانة منطقة الرياض © 2024
         </p>

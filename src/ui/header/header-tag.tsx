@@ -14,9 +14,7 @@ export default function HeaderTag({
       className={`${show ? "flex" : "hidden"} justify-end items-center mx-auto py-7 ${px}`}
     >
       <div className="flex flex-col justify-end">
-        <h1
-          className={`flex justify-end py-1 text-text-white ${h1}`}
-        >
+        <h1 className={`flex justify-end py-1 text-text-white ${h1}`}>
           أمانة منطقة الرياض
         </h1>
         <p className={`${h6}`}>

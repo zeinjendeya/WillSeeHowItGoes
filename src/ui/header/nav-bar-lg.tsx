@@ -40,9 +40,7 @@ export default function NavBarLG() {
             </Link>
           </div>
 
-          <ul
-            className="flex gap-5 text-btn-sm justify-center flex-row-reverse w-full"
-          >
+          <ul className="flex gap-5 text-btn-sm justify-center flex-row-reverse w-full">
             <DropdownLg
               gridCols="2"
               className="flex items-start justify-end gap-0.5"
@@ -78,7 +76,13 @@ export default function NavBarLG() {
             href="/"
             className="flex items-center justify-between md:w-fit gap-4"
           >
-            <Image src={SvgSrc} alt="Amana Logo" className="h-auto" width={300} height={93} />
+            <Image
+              src={SvgSrc}
+              alt="Amana Logo"
+              className="h-auto"
+              width={300}
+              height={93}
+            />
           </Link>
         </div>
         <HeaderTag px="px-8" show={true} h1="h4" h6="h6" />

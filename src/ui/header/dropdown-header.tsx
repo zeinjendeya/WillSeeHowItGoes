@@ -1,6 +1,5 @@
 "use client";
 
-
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { BiSolidLeftArrow } from "react-icons/bi";

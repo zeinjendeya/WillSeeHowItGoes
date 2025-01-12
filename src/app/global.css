@@ -141,7 +141,6 @@
   --tw-shadow-colored: 0px 4px 10px 0px var(--tw-shadow-color) !important;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
