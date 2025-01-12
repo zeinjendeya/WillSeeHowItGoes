@@ -17,8 +17,8 @@ export default function Footer() {
     <footer className="w-full flex flex-col justify-between mt-14">
       <div className="flex justify-between lg:flex-row-reverse flex-col bg-green-500 gap-4 px-8 py-8">
         <div className="lg:w-1/4 w-full flex flex-col gap-4 items-center justify-between">
-          <Image src={Logo} alt="logo" width={159} height={159} />
-          <Image src={Vision} alt="logo" width={159} height={159} />
+          <Image src={Logo} className="h-auto" alt="logo" width={159} height={159} />
+          <Image src={Vision} className="h-auto" alt="logo" width={159} height={159} />
         </div>
 
         <FooterListMd />

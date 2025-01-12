@@ -67,7 +67,7 @@ export default function NavBarMS() {
             href="/"
             className="flex items-center justify-between w-fit gap-4"
           >
-            <Image src={SvgSrc} alt="Amana Logo" width={220} height={93} />
+            <Image src={SvgSrc} className="h-auto" alt="Amana Logo" width={220} height={93} />
           </Link>
         </div>
 

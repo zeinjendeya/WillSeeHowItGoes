@@ -20,7 +20,7 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="bg-rm-white">
+      <body className="bg-rm-white text-right">
         <Header />
         {children}
         <Footer />
