@@ -1,3 +1,5 @@
+import Button from "./button";
+
 interface User {
   name: string;
   email: string;
@@ -41,6 +43,7 @@ export default async function UserCard() {
               {user.address.street + " - " + user.address.city}
             </p>
           </div>
+          {/* <Button /> */}
         </div>
       ))}
     </>
