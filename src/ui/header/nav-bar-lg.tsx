@@ -81,7 +81,6 @@ export default function NavBarLG() {
               alt="Amana Logo"
               className="h-auto"
               width={300}
-              height={93}
             />
           </Link>
         </div>

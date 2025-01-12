@@ -22,14 +22,12 @@ export default function Footer() {
             className="h-auto"
             alt="logo"
             width={159}
-            height={159}
           />
           <Image
             src={Vision}
             className="h-auto"
             alt="logo"
             width={159}
-            height={159}
           />
         </div>
 

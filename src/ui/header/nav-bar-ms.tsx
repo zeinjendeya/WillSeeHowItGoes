@@ -72,7 +72,6 @@ export default function NavBarMS() {
               className="h-auto"
               alt="Amana Logo"
               width={220}
-              height={93}
             />
           </Link>
         </div>
