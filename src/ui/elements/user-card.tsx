@@ -9,13 +9,14 @@ interface User {
   };
 }
 
-export default async function UserCard() {
+export async function getUsers() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const users = await response.json();
+  return users;
+}
 
-  // inspect data returned from the api
-  // make interface based on what we want from users data
-  // give this data to user element
+export async function UserCard() {
+  const users = await getUsers();
 
   return (
     <>
