@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BahijTheSansArabic";
+  src: url("../../public/fonts/Bahij_TheSansArabic-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BahijTheSansArabic";
+  src: url("../../public/fonts/Bahij_TheSansArabic-Plain.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BahijTheSansArabic";
+  src: url("../../public/fonts/Bahij_TheSansArabic-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  font-family: "BahijTheSansArabic";
+}
+
+.section-container {
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-xxl {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.text-xl {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.text-lg {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.text-md {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text-sm {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-btn-sm {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.label11 {
+  font-size: 12px;
+  line-height: normal;
+}
+
+.label12 {
+  font-size: 10px;
+  line-height: normal;
+}
+
+.h1 {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h4 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h5 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h6 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h5-md {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h6-md {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.h5-sm {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.bg-triangle-pattern {
+  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0.9), #fff 25%),
+    url("/card-pattern.svg");
+}
+
+.shadow-component {
+  --tw-shadow: 0px 4px 10px 0px #7e7e7e0d !important;
+  --tw-shadow-colored: 0px 4px 10px 0px var(--tw-shadow-color) !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bg-pattern {
+  background-image: url("../../public/subNavigationCard.svg");
+}
+.bg-x-10 {
+  background-position: 5% center;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
